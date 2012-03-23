@@ -14,6 +14,7 @@
   <modules>
     <module>fig-core</module>
     <module>fig-zookeeper</module>
+    <module>fig-cli</module>
   </modules>
 
   <developers>
