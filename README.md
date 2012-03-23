@@ -22,11 +22,11 @@ hello=world
 Now, in Java, you can get your properties.
 
 ```java
-Map<String, String> config = new PropertiesConfigProvider().getConfig(new URI("file:///tmp/config.properties"))
+Map<String, String> config = new LocalFileSystem().getConfig(new URI("file:///tmp/config.properties"), new PropertiesDeserializer())
 System.out.println("hello " + config.get("hello"));
 ```
 
-## ConfigRunner
+## CLI
 
 Fig also provides an easy way to execute programs from the CLI using config (instead of CLI arguments).
 
@@ -39,7 +39,7 @@ foo=bar
 The main-class allows us to execute the MyConfigPrinter.
 
 ```
-./bin/run-config.sh --config-path=file:///tmp/config.properties --config-provider=fig.providers.PropertiesConfigProvider
+./bin/run-config.sh --config-path=file:///tmp/config.properties
 ```
 
 It really is that simple!
@@ -59,3 +59,4 @@ cd fig-example
 ```
 
 This will execute a little Java class that prints the configuration in example.properties.
+
