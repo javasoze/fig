@@ -16,6 +16,7 @@
     <module>fig-zookeeper</module>
     <module>fig-cli</module>
     <module>fig-example</module>
+    <module>fig-json</module>
   </modules>
 
   <developers>

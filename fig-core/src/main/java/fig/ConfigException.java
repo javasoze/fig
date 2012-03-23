@@ -6,7 +6,11 @@ public class ConfigException extends RuntimeException {
   private final String msg;
 
   public ConfigException(Throwable e) {
-    this("", e);
+    this(null, e);
+  }
+
+  public ConfigException(String msg) {
+    this(msg, null);
   }
 
   public ConfigException(String msg, Throwable e) {
