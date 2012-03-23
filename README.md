@@ -26,7 +26,7 @@ Map<String, String> config = new LocalFileSystem().getConfig(new URI("file:///tm
 System.out.println("hello " + config.get("hello"));
 ```
 
-## CLI
+## Command Line Execution
 
 Fig also provides an easy way to execute programs from the CLI using config (instead of CLI arguments).
 
@@ -45,6 +45,8 @@ The main-class allows us to execute the MyConfigPrinter.
 It really is that simple!
 
 ## Example Project
+
+Fig has an example project falled "fig-example", which demonstrates how to use Fig with the run-config.sh script.
 
 Follow these instructions to try things out.
 
