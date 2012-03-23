@@ -12,6 +12,7 @@
 
   <modules>
     <module>fig-core</module>
+    <module>fig-zookeeper</module>
   </modules>
 
   <developers>
