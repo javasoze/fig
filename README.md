@@ -1,5 +1,3 @@
-# Fig
-
 Fig is a basic configuartion library for Java libraries.
 
 ## Why?
