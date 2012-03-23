@@ -4,5 +4,5 @@ import java.net.URI;
 import java.util.Map;
 
 public interface ConfigProvider {
-  Map<String, String> getConfig(URI uri) throws ConfigException;
+  Map<String, String> getConfig(URI uri);
 }
