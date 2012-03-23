@@ -2,17 +2,42 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>fig</groupId>
-  <artifactId>fig</artifactId>
-  <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>fig</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+  <artifactId>fig-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>Fig Parent</name>
+  <description>
+    Simple configuration for the JVM.
+  </description>
+
+  <modules>
+    <module>fig-core</module>
+  </modules>
+
+  <developers>
+    <developer>
+      <name>Chris Riccomini</name>
+      <email>criccomini.aux@gmail.com</email>
+      <timezone>-8</timezone>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>Apache License 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git://github.com/criccomini/fig.git</connection>
+    <developerConnection>scm:git:git@github.com:criccomini/fig.git</developerConnection>
+    <url>http://github.com/criccomini/fig/</url>
+  </scm>
+
+  <issueManagement>
+    <system>github</system>
+    <url>http://github.com/criccomini/fig/issues#issue/</url>
+  </issueManagement>
 </project>
