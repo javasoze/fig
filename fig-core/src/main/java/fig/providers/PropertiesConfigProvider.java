@@ -19,6 +19,9 @@ public class PropertiesConfigProvider implements ConfigProvider {
       FileInputStream in = new FileInputStream(configPath);
       HashMap<String, String> out = new HashMap<String, String>();
 
+      props.load(in);
+      in.close();
+
       for (Entry<Object, Object> entry : props.entrySet()) {
         Object k = entry.getKey();
         Object v = entry.getValue();
@@ -28,8 +31,6 @@ public class PropertiesConfigProvider implements ConfigProvider {
         }
       }
 
-      props.load(in);
-      in.close();
       return Collections.unmodifiableMap(out);
     } catch (Exception e) {
       throw new ConfigException(e);
