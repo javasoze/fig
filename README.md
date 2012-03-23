@@ -1,16 +1,19 @@
 # Fig
 
-Fig is a basic configuartion library for Java libraries.
+Fig is a simple configuartion library for Java.
 
 ## Why?
 
-* No static methods
-* Pluggable
-* Simple
+*   No static methods
+*   Pluggable
+*   No types
+*   Stupid simple
 
 ## Using Fig
 
-First, create a config file. In this example, we'll use a Java property file.
+Fig is really easy to use. I promise.
+
+Let's use Fig with a Java property file.
 
 ```
 hello=world
@@ -19,12 +22,13 @@ hello=world
 Now, in Java, you can get your properties.
 
 ```java
-new PropertiesConfigProvider(new URI("file:///tmp/config.properties"))
+Map<String, String> config = new PropertiesConfigProvider().getConfig(new URI("file:///tmp/config.properties"))
+System.out.println("hello " + config.get("hello"));
 ```
 
 ## ConfigRunner
 
-Fig also provides a simple way to execute programs from the CLI using config (instead of CLI arguments).
+Fig also provides an easy way to execute programs from the CLI using config (instead of CLI arguments).
 
 Let's create another Java property file.
 
@@ -32,8 +36,7 @@ Let's create another Java property file.
 main-class=fig.example.MyConfigPrinter
 foo=bar
 ```
-
-Now, let's execute it.
+The main-class allows us to execute the MyConfigPrinter.
 
 ```
 ./bin/run-config.sh --config-path=file:///tmp/config.properties --config-provider=fig.providers.PropertiesConfigProvider
