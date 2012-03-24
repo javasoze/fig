@@ -2,14 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>fig</groupId>
-  <artifactId>fig-parent</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0.0-SNAPSHOT</version>
-  <name>Fig Parent</name>
-  <description>
-    Simple configuration for the JVM.
-  </description>
+  <parent>
+    <groupId>fig</groupId>
+    <artifactId>fig-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>fig-parent/pom.xml</relativePath>
+  </parent>
 
   <modules>
     <module>fig-core</module>
@@ -18,6 +16,10 @@
     <module>fig-example</module>
     <module>fig-json</module>
   </modules>
+
+  <artifactId>fig</artifactId>
+  <packaging>pom</packaging>
+
 
   <developers>
     <developer>

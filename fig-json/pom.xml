@@ -6,6 +6,7 @@
     <groupId>fig</groupId>
     <artifactId>fig-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../fig-parent/pom.xml</relativePath>
   </parent>
 
   <artifactId>fig-json</artifactId>

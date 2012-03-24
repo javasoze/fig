@@ -6,13 +6,41 @@
     <groupId>fig</groupId>
     <artifactId>fig-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../fig-parent/pom.xml</relativePath>
   </parent>
 
   <artifactId>fig-core</artifactId>
   <name>Fig Core Library</name>
+  <packaging>jar</packaging>
+  
+  <properties>
+    <poi.version>3.7</poi.version>     
+    <slf4j.version>1.6.1</slf4j.version>
+    <logback.version>0.9.27</logback.version>
+    <org.springframework.version>3.0.5.RELEASE</org.springframework.version>    
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <build>
     <plugins>
+      <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.1</version>
+            <configuration>
+               <source>1.6</source>
+               <target>1.6</target>
+               <encoding>UTF-8</encoding>
+            </configuration>
+       </plugin>
+       <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.5</version>
+          <configuration>
+          </configuration>
+      </plugin>
+       
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
