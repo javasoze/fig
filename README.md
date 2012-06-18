@@ -1,6 +1,6 @@
 # Fig
 
-Fig is a simple configuartion library for Java.
+Fig is a simple configuration library for Java.
 
 ## Why?
 
@@ -51,7 +51,7 @@ Fig has an example project falled "fig-example", which demonstrates how to use F
 Follow these instructions to try things out.
 
 ```
-git://github.com/criccomini/fig.git
+git clone git://github.com/criccomini/fig.git
 cd fig
 mvn package
 cd fig-example/target
